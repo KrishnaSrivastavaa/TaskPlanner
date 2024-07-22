@@ -42,7 +42,7 @@ export const Login = () => {
 
 
   return (
-    <div className='min-h-screen bg-indigo-400 content-center'>
+    <div className='min-h-screen bg-indigo-950 content-center'>
 
     
     <form onSubmit={handleSubmit(onSubmit)} action="" className='flex flex-col gap-4 content-center' >
@@ -61,7 +61,7 @@ export const Login = () => {
        type="password"
        placeholder='Password'
         />
-        <button className='rounded-lg bg-indigo-600 text-white p-2' type='submit'>Submit</button>
+        <button className='rounded-lg bg-indigo-700 text-white p-2' type='submit'>Submit</button>
     </form>
     </div>
   )

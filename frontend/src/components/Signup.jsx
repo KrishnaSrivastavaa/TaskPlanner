@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 
 import "./css/Signup.css"
@@ -37,23 +37,32 @@ export const Signup = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} action="" >
-      <h2>Sign Up Here</h2>
-      <input
+    <div className='form-bg-div'>
+
+   
+    <form onSubmit={handleSubmit(onSubmit)} action="" className='form-main' >
+      <h2 className='form-heading'>Sign Up Here</h2>
+      <input className='form-input'
       {...register("email", {
         required: "Email is required",
       })}
        type="email"
        placeholder='Email'
         />
-      <input
+      <input className='form-input'
       {...register("password", {
         required: "password is required",
       })}
        type="password"
        placeholder='Password'
         />
-        <button type='submit'>Submit</button>
+        <button className='form-submit-button' type='submit'>Submit</button>
+        
+        <div className='flex flex-col gap-1 m-3'>
+        <p className='text-white pb-0 m-auto'>Already have an account ?</p><Link className='text-white hover:text-indigo-400' to="/login">login</Link>
+        </div>
     </form>
+     
+    </div>
   )
 }

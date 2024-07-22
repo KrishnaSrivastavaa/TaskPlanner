@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 
-// import "./css/Signup.css"
+import "./css/Signup.css"
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -42,26 +42,26 @@ export const Login = () => {
 
 
   return (
-    <div className='min-h-screen bg-indigo-950 content-center'>
+    <div className='form-bg-div'>
 
     
-    <form onSubmit={handleSubmit(onSubmit)} action="" className='flex flex-col gap-4 content-center' >
-      <h2 className='text-white text-2xl font-bold p-2'>Log in Here</h2>
-      <input className='rounded-xl bg-indigo-100 text-center h-10'
+    <form onSubmit={handleSubmit(onSubmit)} action="" className='form-main' >
+      <h2 className='form-heading'>Log in Here</h2>
+      <input className='form-input'
       {...register("email", {
         required: "Email is required",
       })}
        type="email"
        placeholder='Email'
         />
-      <input className='rounded-xl bg-indigo-100 text-center h-10'
+      <input className='form-input'
       {...register("password", {
         required: "password is required",
       })}
        type="password"
        placeholder='Password'
         />
-        <button className='rounded-lg bg-indigo-700 text-white p-2' type='submit'>Submit</button>
+        <button className='form-submit-button' type='submit'>Submit</button>
     </form>
     </div>
   )

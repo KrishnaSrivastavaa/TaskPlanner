@@ -1,17 +1,40 @@
+
+.form-bg-div{
+  @apply min-h-screen bg-indigo-950 content-center;
+}
+
+.form-main{
+  @apply flex flex-col gap-4 content-center;
+}
+
+.form-heading{
+  @apply text-white text-2xl font-bold p-2;
+}
+
+.form-input{
+  @apply rounded-xl bg-indigo-100 text-center h-10;
+
+}
+
+.form-submit-button{
+  @apply rounded-lg bg-indigo-700 text-white p-2;
+}
+
+
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+width: 100%;
 
 
-    
+  
 }
 
 input{
-    margin: 10px;
-    height: 30px;
-    width: 300px;
+  margin: 10px;
+  height: 30px;
+  width: 300px;
 }
